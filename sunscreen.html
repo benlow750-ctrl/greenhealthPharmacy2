@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sustainable Mineral Sunscreen | GreenHealth Pharmacy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">
+          <img src="images/greenhealth-logo.png" alt="GreenHealth Pharmacy logo" class="brand-logo">
+        </div>
+        <div>
+          <div class="brand-name">GreenHealth Pharmacy</div>
+          <div class="brand-tagline">Care you can trust</div>
+        </div>
+      </a>
+
+      <nav class="mainnav">
+        <a class="mainnav-link" href="index.html">HOME</a>
+        <a class="mainnav-link" href="services.html">SERVICES</a>
+        <a class="mainnav-link" href="sustainability.html">SUSTAINABILITY</a>
+        <a class="mainnav-link member-pill" href="member.html">
+          <span class="member-dot">●</span> MEMBER
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO BACKGROUND -->
+  <section class="hero-bg">
+    <div class="hero-content">
+      <h1 class="hero-title">Refillable Mineral Sunscreen</h1>
+      <p class="hero-subtitle">
+        A pharmacy-exclusive, refillable mineral sunscreen designed for daily use,
+        sensitive skin, and environmental responsibility.
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="container pagehead">
+    <a href="services.html" class="back-link">← Back to Services</a>
+
+    <section class="product-section">
+      <div class="accordion-grid">
+
+        <div class="acc-item">
+          <button class="acc-btn" type="button" aria-expanded="false">
+            Effective Broad-Spectrum Protection
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-panel">
+            <p>
+              Formulated with non-nano mineral UV filters (zinc oxide and titanium dioxide),
+              providing reliable UVA and UVB protection suitable for Singapore’s climate.
+            </p>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-btn" type="button" aria-expanded="false">
+            Gentle for Sensitive Skin
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-panel">
+            <p>
+              Free from unnecessary fragrances and harsh additives. Suitable for all ages
+              and skin types, including sensitive or reactive skin.
+            </p>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-btn" type="button" aria-expanded="false">
+            Supports Skin Barrier Comfort
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-panel">
+            <p>
+              Enriched with vitamin E and moisturising emollients to support hydration
+              and skin comfort during sun exposure.
+            </p>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-btn" type="button" aria-expanded="false">
+            Environmentally Responsible
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-panel">
+            <ul>
+              <li>Non-nano mineral UV filters</li>
+              <li>Plant-derived squalane and candelilla wax</li>
+              <li>Biodegradable, vegan-friendly ingredients where possible</li>
+              <li>Refill-first model to reduce packaging waste</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-btn" type="button" aria-expanded="false">
+            Product Details
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-panel">
+            <ul>
+              <li><strong>Net weight:</strong> 85 g</li>
+              <li><strong>Suitable for:</strong> Face &amp; body</li>
+              <li><strong>Skin type:</strong> All skin types</li>
+              <li><strong>Texture:</strong> Lightweight cream / balm</li>
+              <li><strong>Usage:</strong> Daily sun protection</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-btn" type="button" aria-expanded="false">
+            Key Ingredients
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-panel">
+            <p>
+              Water, zinc oxide (non-nano), titanium dioxide (non-nano),
+              plant-derived squalane, jojoba oil, lecithins,
+              candelilla wax, silica, tocopherol (vitamin E),
+              radish root extract
+            </p>
+          </div>
+        </div>
+
+        <div class="acc-item acc-note">
+          <button class="acc-btn" type="button" aria-expanded="false">
+            Sustainability Note
+            <span class="acc-icon">+</span>
+          </button>
+          <div class="acc-panel">
+            <p>
+              Developed using dermatology-informed formulation principles aligned with
+              skin health practices at the National Skin Centre.
+            </p>
+            <p class="disclaimer">
+              The product is endorsed or manufactured by the National Skin Centre.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2026 GreenHealth Pharmacy. All rights reserved.
+  </footer>
+
+  <!-- ACCORDION SCRIPT (ADDED FOR YOU) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const items = document.querySelectorAll(".acc-item");
+      if (!items.length) return;
+
+      items.forEach((item) => {
+        const btn = item.querySelector(".acc-btn");
+
+        btn.addEventListener("click", () => {
+          const isOpen = item.classList.contains("is-open");
+
+          items.forEach((i) => {
+            i.classList.remove("is-open");
+            const b = i.querySelector(".acc-btn");
+            if (b) b.setAttribute("aria-expanded", "false");
+          });
+
+          if (!isOpen) {
+            item.classList.add("is-open");
+            btn.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
